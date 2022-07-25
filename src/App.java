@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class App {
@@ -31,8 +32,18 @@ public class App {
         System.out.println(listaAlunos.size());
         System.out.println(listaAlunos.contains(aluno1));
       //  listaAlunos.remove(0);
-      // listaAlunos.iterator(); (Perguntar para Leandro)    
-    
+      Iterator<Aluno> it = listaAlunos.iterator();
+      while(it.hasNext()) {
+          Aluno aluno = it.next();
+          if(aluno.getNome().equals("Willian")) {
+              it.remove();
+          }
+      }
+
+      //(Perguntar para Leandro)    
+      // pedir ajuda a Leandro com o Github. (Push and pull)
+      // O ''.this''' em uma classe que utiliza super é um ponto de referência para o objeto que está sendo instanciado.
+
      
     
     
